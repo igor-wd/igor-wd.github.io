@@ -1,0 +1,6 @@
+mixin section(data_section)
+
+	each item in data_section.sidebar
+		+b.SECTION.section
+			+e.H5.headline= item.title
+			+e.H6.data= item.text

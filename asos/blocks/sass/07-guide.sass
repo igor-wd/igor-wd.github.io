@@ -1,0 +1,55 @@
+.color
+	&--white
+		color: $white
+	&--light
+		color: $grey-blue
+
+%font-size-10
+	font-size: 10px
+
+%letter-spacing-H4-6
+	letter-spacing: 1.1px
+	
+%font-weight-900
+	font-weight: 900
+//--p
+	p
+		font-size: 28px
+		strong
+			font-weight: 800
+//--H1-H6
+h1, h2, h3, h4, h5, h6
+	font: 600 14px $ff-mon
+	text-transform: uppercase
+	letter-spacing: 0.5px
+
+h1
+	font-size: 2.5rem
+	font-weight: 400
+
+h2
+	font-size: 30px
+	font-weight: 500
+
+h3
+	font-size: 16px
+	letter-spacing: 0.6px
+
+h4
+	@extend %font-size-10
+	@extend %letter-spacing-H4-6
+
+h5
+	color: $grey-blue
+	@extend %font-size-10
+	@extend %letter-spacing-H4-6
+
+h6
+	%h6
+		@extend %font-size-10
+		@extend %letter-spacing-H4-6
+//--buttons
+button
+	%h6
+	padding: 12px 36px
+	+br(1px, $grey-blue)

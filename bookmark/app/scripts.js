@@ -19,11 +19,11 @@ $.getJSON('data.json', function(data) {
 				output += '<p>'+ val.bio +'</p>';
 				output += '</div>';
 			}
-			output += '</div>';
-			$('#update').html(output);
+			// output += '</div>';
+			// $('#update').html(output);
 		});
-		// output += '</div>';
-		// $('#update').html(output);
+		output += '</div>';
+		$('#update').html(output);
 	}
 });
 

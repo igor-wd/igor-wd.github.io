@@ -1,0 +1,50 @@
+include _assets/bemto/bemto
+- set_bemto_settings({modifier: "--" })
+
+include head/head
+include aside/aside
+include aside/aside-section
+
+mixin flex-space
+	span.flex-space
+
+doctype html
+html(lang="ru")
+
+	block head
+		head
+			+head({
+				"title": "ASOS - Shop the new range of men's clothes",
+				"author": "igor@mosijchuck",
+				"description": "Discover the latest trends in men's fashion and style with ASOS. Shop the range of clothes, accessories, shoes, bags and more."
+			})
+	
+	+b.BODY
+
+		+b.container
+			+aside
+			+e.main
+				br
+				br
+				h1 Contrast long sleeve
+				p Asos Long Sleeve T-Shirt With Contrast Roglan Sleeves
+				br
+				br
+				| Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів Letraset, які містили уривки з Lorem Ipsum, і вдруге - нещодавно завдяки програмам комп'ютерного верстування на кшталт Aldus Pagemaker, які використовували різні версії Lorem Ipsum.. 
+				br
+				br
+
+		.template-grid
+			ul
+				li
+				li
+				li
+				li
+				li
+				li
+				li
+				li
+				li
+				li
+				li
+				li

@@ -1,0 +1,86 @@
+=wrap($pp: 0)
+	min-width: $min-page-width
+	max-width: $wrap
+	margin: 0 auto
+	+ph($pp)
+
+=col($n: 0, $col_gutter: $gg, $m: $g)
+	@if $n == 0
+		flex-grow: 1
+		width: 100%
+	width: calc(#{$n*$atom} - #{$col_gutter})
+	+mh($m)
+
+=size($n: 0)
+	@if $n == 0
+		flex-grow: 1
+		// flex-shrink: 1000
+	@if $n > 0 and $n < $cols
+		width: $n * $atom
+
+=grid($pl:$g,$pr:$g)
+	padding-right: $pr
+	padding-left: $pl
+=addl($a: 0%)
+	padding-left: calc(#{$a} + #{$g})
+=addr($a: 0)
+	padding-right: calc(#{$a} + #{$g}
+
+=box($n: 0, $ph: $g, $p: 0)
+	width: $n*$atom
+
+	@if $n == 0
+		flex-grow: 1
+		// width: 100%
+
+	@if $ph != 0
+		+ph($ph)
+	@if $p != 0
+		+ph($p+$ph)
+
+=row-flex($fw: wrap)
+	display: flex
+	flex-wrap: $fw
+
+=media($break)
+	@if map-has-key($screens, $break)
+		@media (max-width: #{map-get($screens, $break)}px)
+			@content
+
+=media-min($break)
+	@if map-has-key($screens, $break)
+		@media (min-width: #{map-get($screens, $break)}px)
+			@content
+
+//----------------------------------------------------------------
+
+=template-grid($op: .25)
+	width: 100%
+	opacity: $op
+	position: fixed
+	z-index: -100
+	left: 50%
+	top: 0
+	transform: translate(-50%)
+	transform-origin: 50%
+
+	+wrap
+
+	ul
+		+row-flex
+		// +row-flex(center)
+		background: rgba(23,54,104,.3)
+		
+		border-right: 1px solid #173668
+		li
+			+col(1)
+			background: rgba(23,54,104,.6)
+			// +br
+			border-right: 1px solid #173668
+			&:before, &:after
+				height: 100vh
+				content: ''
+				display: block
+			&:before
+				border-left: 1px solid #173668
+				margin-left: -$g

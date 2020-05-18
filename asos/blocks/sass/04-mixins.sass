@@ -1,0 +1,58 @@
+=mh($g)
+	margin-left: $g
+	margin-right: $g
+
+=ph($g)
+	padding-left: $g
+	padding-right: $g
+
+=mh($g)
+	margin-left: $g
+	margin-right: $g
+
+=ph($g)
+	padding-left: $g
+	padding-right: $g
+
+
+=mv($g)
+	margin-top: $g
+	margin-bottom: $g
+
+=pv($g)
+	padding-top: $g
+	padding-bottom: $g
+
+=mv($g)
+	margin-top: $g
+	margin-bottom: $g
+
+=pv($g)
+	padding-top: $g
+	padding-bottom: $g
+
+=br($a: 1px, $c: black)
+	border: $a solid $c
+
+=ot($a: 1px, $c: #000, $style: solid)
+	border: $a $style $c
+
+
+
+=quat($quatSide)
+	height: $quatSide
+	width: $quatSide
+
+=jc($jc: 5)
+	@if $jc == 0
+		justify-content: center
+	@else if $jc == 1
+		justify-content: flex-start
+	@else if $jc == 2
+		justify-content: flex-end
+	@else if $jc == 3
+		justify-content: space-around
+	@else if $jc == 4
+		justify-content: space-evenly
+	@else
+		justify-content: space-between

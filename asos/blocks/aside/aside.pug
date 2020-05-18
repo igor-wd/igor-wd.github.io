@@ -1,0 +1,37 @@
+mixin aside
+	block aside
+		+e.ASIDE.sidebar
+			+b.HEADER
+				+b.A.logo(href="http://asos.com")
+					+e.IMG.img(src="img/logo_asos.svg", alt="asos")
+				+b.A.menu-burger
+					+e.IMG.img(src="img/btn_menu.svg", alt="more...")
+				+flex-space
+				+b.A(href="#").liked
+					+e.IMG.img(src="img/icon_liked.svg", alt="liked")
+				+b.A(href="#").basket
+					+e.IMG.img(src="img/icon_basket.svg", alt="basket")
+
+			+section({
+				"sidebar": [
+					{
+						"title": "hide panel"
+					},{
+						"title": "almost there",
+						"text": "free shipping worldwide"
+					},{
+						"title": "choose your size",
+						"text": "ex"
+					},{
+						"title": "choose color",
+						"text": "white/black"
+					},{
+						"title": "choose fit",
+						"text": "longline"
+					},
+				]
+			})
+			+b.FOOTER.actions
+				+e.BUTTON add to basket
+				+e.BUTTON save this item
+	
