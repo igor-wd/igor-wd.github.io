@@ -1,0 +1,43 @@
+//paddding margin
+=vp($a: 1rem)
+	padding-bottom: $a
+	padding-top: $a
+=hp($a: 1rem)
+	padding-left: $a
+	padding-right: $a
+=vm($a: 1rem)
+	margin-top: $a
+	margin-bottom: $a
+=hm($a: 1rem)
+	margin-left: $a
+	margin-right: $a
+
+//////
+//@media screen and ( max-width:  )
+
+// =hpn($plus: 2, $c: $debug-color)
+	// +hp($wrap+$plus)
+	// color: $c
+
+=btn-base($p1: 0.8, $p2:2, $c: $wt, $bg: $dk)
+	background: $bg
+	color: $c
+	font-size: .8rem
+	font-weight: 700
+	padding: #{$p1}rem #{$p2}rem
+	text-align: center
+
+=rad($r: 0)
+	border-radius: #{$r}rem
+
+=b($color: red, $w: 1)
+	border: #{$w}px solid $color
+
+=o($color: red, $w: 1)
+	outline: #{$w}px solid $color
+
+// =row
+	// display: flex
+// =col
+	// flex: 1
+

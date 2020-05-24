@@ -1,0 +1,25 @@
+$blh: 115% //base-line-height
+html
+	line-height: $blh
+
+body
+	background: grey
+	width: 100%
+	display: block
+	line-height: normal
+	// color: #494949
+	font: 400 1rem 'Roboto', sans-serif
+p, li
+button
+	text-align: center
+	&.base
+		+btn-base
+		text-transform: uppercase
+button.main
+	+btn-base(1, 2)
+	text-transform: uppercase
+	font-weight: 500
+	font-size: .6rem
+	letter-spacing: .35rem
+p + p
+	margin-top: 1rem

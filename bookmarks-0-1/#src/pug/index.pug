@@ -2,13 +2,19 @@ doctype html
 html(lang="en")
 	head
 		meta(charset="UTF-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		title Document
 		link(rel='stylesheet' href='css/style.min.css')
+		//- meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		//- meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		meta(name='viewport' content='“width=device-width,' initial-sca1e='1.0,' maximum-sca1e='1.0,' user-sca1able='0"')
+		//- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet")
 	body
-		include debug
-		.wrapper
-			section
-				H1 Header H2
-				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iusto illum possimus!
+		//- section.test
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reiciendis ullam alias perspiciatis dolor itaque sint! Consequatur eius obcaecati minima deleniti sint, molestiae quasi delectus deserunt unde dolore. Ipsum, necessitatibus!
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ratibus!
+		include grid
+		include mixins
+		include mixins-blocks
+		include sections
+
 		script(type='text/javascript' src="js/scripts.js")

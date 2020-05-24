@@ -1,0 +1,92 @@
+// Базовые стили
+	*, *:before, *:after
+		box-sizing: border-box
+	button
+		border: 0
+		padding: 0
+		margin: 0
+		outline: 0
+	::selection
+		color: #FFFFFF
+		background-color: #993366
+
+// Изображения в фоне
+	div
+		background: url('../img/1.png'), url('../img/2.png'), url('../img/3.png') left bottom, black
+
+// Шрифт + Интерполяция
+	$blh: 150% //base-line-height
+	body
+		font: 400 1rem/#{$blh} 'Roboto', sans-serif
+
+// Селекторы атрибутов
+	a(href^="http://")
+		color: orange
+	[class^="wrap"]
+		color: orange
+
+// Шаблонные селекторы
+	%wrapper
+		width: 100%
+		padding: 0 calc( (100% - #{$ww}) / 2)
+	=wrap
+		@content
+		@extend %wrapper
+		border: 0
+
+// COLUMN & ROW
+	=c1($c: $count)
+		text-align: left
+		display: inline-table
+		max-width: $ww
+		width: $c * 100% / $count
+	=r1
+		display: table
+		width: 100%
+		text-align: center
+		max-width: $ww
+		> *
+			+c1
+
+// Ссылка на родителя селектора
+	a
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+		div &
+			font-weight: normal
+
+// Мапы (Ассоциативные массивы)
+	$status-colors: (
+		primary: #000,
+		success: #27BA6C,
+		info: #03a9f4,
+		warning: #FF8833,
+		danger: #ff1a1a
+	)
+	.message
+		@each $status, $color in $status-colors
+			&--#{$status}
+				background: $color
+
+// Миксин медиазапроса
+	$screens: (b1: 320, b2: 480, b3: 760, b4: 96, b5: 1000, b6: 1200, b7: 1440)
+
+	=media($bp: b1)
+		@if map-has-key($screens, $bp)
+			@media screen and (max-width: #{map-get($screens, $bp)}px)
+				@content
+
+	.div
+		color: red
+		width: 50%
+
+		+media
+			color: green
+
+		+media(b2)
+			color: orange
+		+media(b3)
+			color: purple
+		+media(b1)
+			width: 100%

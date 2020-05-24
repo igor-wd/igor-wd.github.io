@@ -1,0 +1,7 @@
+{
+	"workbench.editor.scrollToSwitchTabs": true,
+	"window.title": "${activeEditorShort} ・ ${rootName} ・ [${folderPath} ]",
+	"git.ignoreLimitWarning": true,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.sortOrder": "type"
+}

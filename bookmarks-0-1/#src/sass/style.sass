@@ -1,0 +1,30 @@
+@import reset
+@import colors
+@import mixins
+@import base
+@import grid
+@import text
+@import sections
+
+//DEBUG
+.tw //temp width debug
+	&::before, &::after
+		text-align: center
+		// content: "100500"
+		content: ""
+		display: block
+		min-height: .5rem
+		background: $deb
+.t
+	content: ""
+	height: 32px
+	width: 320px
+	display: block
+	background: transparentize($deb, .5)
+
+	float: right
+	+o
+
+.block
+	display: block
+	width: 100%

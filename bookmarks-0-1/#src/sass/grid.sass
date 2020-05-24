@@ -1,0 +1,47 @@
+$ww: 60rem
+$count: 12
+$grid-pad: 20rem
+$gutter: 1rem
+
+%wrapper
+	width: 100%
+	padding: 0 calc( (100% - #{$ww}) / 2)
+
+=wrap
+	@content
+	@extend %wrapper
+
+=col($c: $count)
+	text-align: initial
+	display: inline-table
+	max-width: $ww
+	width: $c * 100% / $count
+	> *
+		// ta
+=row
+	display: table
+	width: 100%
+	text-align: center
+	> *
+		+col
+
+
+
+=template-grid($op: .2	)
+	opacity: $op
+	z-index: -1000
+	position: fixed
+	line-height: 0
+
+	+row
+	+wrap
+	> *
+		+col(1)
+		border: 1rem solid
+		border-top: 0
+		border-bottom: 0
+		background: transparentize($debug, 0)
+
+		height: 100vh
+.template-grid
+	+template-grid

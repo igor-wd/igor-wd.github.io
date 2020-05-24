@@ -1,0 +1,28 @@
+$wt: #fff
+$dk: #000
+$deb: #B2FFFF
+$deb2: rgba(0,0,0,.2)
+
+%w
+	background: $wt
+%wt
+	color: $wt
+%d
+	background: $dk
+%dt
+	color: $dk
+=w
+	@extend %w
+=wt
+	@extend %wt
+
+
+$card-button: #424547
+$card-base: #6E7379
+$card: #252A2E
+.card
+	color: $card
+	h4
+		color: $card-base
+	button
+		color: $card
