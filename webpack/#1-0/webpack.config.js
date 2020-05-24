@@ -111,18 +111,6 @@ module.exports = {
 			{
 				test: /\.csv$/,
 				use: ['csv-loader']
-			},
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: {
-					loader: 'babel-loader',
-					options: {
-						presets: [
-							'@babel/preset-env'
-						]
-					}
-				}
 			}
 		]
 	}
